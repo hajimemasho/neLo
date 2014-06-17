@@ -1,0 +1,136 @@
+@import url(general.css);
+
+#registerForm{
+	width: 40%;			
+	padding: 20px 15px 20px 15px;
+}
+#registerForm div{
+	width: 100%;
+}
+#registerForm label{	
+	
+	width: 150px;
+	margin-top: 5px;
+	padding: 3px;
+}
+#registerForm input:not([type=submit]):not([type=button]){
+	height: 20px;
+	width: 220px;
+	padding: 15px 8px;
+}
+
+#registerForm input:not([type=submit]):not([type=button]){
+	border: 1px solid #aaa;
+	box-shadow: 0px 0px 3px #ccc, 0px 10px 15px #eee inset;
+	border-radius: 4px;	
+}
+#registerForm input:not([type=submit]):not([type=button]):focus{
+	background: #fff;	
+	border: 1px solid #555;
+	box-shadow: 0 0 3px #aaa;
+	padding-right: 70px;
+}
+#registerForm input[type=submit], #registerForm input[type=button]{
+	float:right;
+	margin-top: 40px;	
+	margin-left:156px;		
+	background-color: #66CCFF;
+    background: -webkit-linear-gradient(top, #66CCFF, #66BBFF);
+    background: -moz-linear-gradient(top, #66CCFF, #66BBFF);
+    background: -ms-linear-gradient(top, #66CCFF, #66BBFF);
+    background: -o-linear-gradient(top, #66CCFF, #66BBFF);
+    background: linear-gradient(top, #66CCFF, #66BBFF);
+    border: 1px solid #66AAFF;
+    border-bottom: 1px solid #66AAFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;    
+    box-shadow: 0 1px 0 0 #CCEEFF inset;       
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #66BBFF;
+}
+#registerForm input[type=submit]:active, #registerForm input[type=button]:active{
+	border: 1px solid #66AAFF;
+	box-shadow: 0 0 10px 5px #66AAFF inset; 
+	-webkit-box-shadow:0 0 10px 5px #66AAFF inset ;
+    -moz-box-shadow: 0 0 10px 5px #66AAFF inset;
+    -ms-box-shadow: 0 0 10px 5px #66AAFF inset;
+    -o-box-shadow: 0 0 10px 5px #66AAFF inset;
+}
+
+#registerForm, input, p, div{
+	float:left;	
+}
+div:not([id=xIcon]):not([id=errorMessage]){		
+	clear:left;
+}
+form{
+	border: 1px solid;
+}
+#bottomSignUpError
+{
+	padding: 5px;
+	font-size: 11px;
+
+	margin-left: 50px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.hiddenSignUpError{	
+	display:none;
+	color: #ED2428;	
+	font-size: 10px;
+}
+.visibleSignUpError{	
+	display:inline;
+	color: #ED2428;		
+	padding: 5px;
+	font-size: 11px;
+}
+.hiddenSubmitError{
+	display: none;
+}
+.visibleSubmitError{
+	display: inline;
+	text-align: center;
+	padding-top: 40px;		
+	color: #ED2428;	
+	font-size: 14px;
+	font-weight: bold;	
+}
+
+#registerForm #error{
+	border: 1px solid #ED2428;
+	background-color: #FFFFDD;
+	margin-bottom: 15px;	
+	padding: 10px 0px 10px 0px;		
+	width: 100%;	
+}
+#registerForm #errorMessage{			
+	text-align:left;		
+	color: #ED2428;
+	font-size: 12px;
+	font-weight: bold;		
+	text-indent: 10px;
+	float:left;	
+	width: 90%;
+}
+#errorMessage span{
+	display:block;
+	padding: 2px;	
+}
+
+#registerForm #xIcon{	
+	float:left;		
+	width: 18px;	
+	height: 18px;
+	margin-left: 10px;
+	background-image: url("xicon.png");
+	background-repeat: no-repeat;
+}

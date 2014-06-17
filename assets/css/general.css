@@ -1,0 +1,68 @@
+body{
+	font: 14px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+
+}
+label{
+	font-family:Georgia, Times, "Times New Roman", serif;	
+}
+form{
+	width:50%;	
+	font-size: 15px;
+	margin-left: 20px;		
+}
+div, input, label, p, span{
+	padding:0;
+	margin:0;
+}
+div, input, label{
+	display: block;	
+}
+
+input, select, textarea, label{
+	font-size: 11px;	
+	
+}
+label, legend{
+	font-weight: bold;
+	margin: 5px 0px 5px 0px;
+}
+
+h4{
+	margin:0px;
+	font-weight:normal;	
+	color: #2C3E50;	
+}
+
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+ul li{
+	display: block;
+}
+
+.hiddenVisibility{
+	visibility: hidden;	
+}
+input{
+	cursor:pointer;
+}
+:-moz-placeholder {
+    color: #CCCCCC;
+}
+ 
+::-webkit-input-placeholder {
+    color: #CCCCCC;
+}
+
+/* scoate border-ul de la inputuri */
+*:focus {
+	outline: none;
+}
+
+#footer{
+	clear:both;
+}
+.normal{
+	font-weight: normal
+}
