@@ -1,0 +1,32 @@
+<users>
+    <user id="1">
+        <email>roxana@yahoo.com</email>
+        <password>dap</password>
+        <firstname>prenume</firstname>
+        <lastname>nume</lastname>
+    </user>
+    <user id="2">
+        <email>darnu@yahoo.com</email>
+        <password>parola</password>
+        <firstname>prenume</firstname>
+        <lastname>nume</lastname>
+    </user>
+    <user id="3">
+        <email>gianina@yahoo.com</email>
+        <password>$2y$10$34pNkkp7NLAI6y8NZBtwf./wbhaS7O0LGNTqT.Z.89f37bFhJcQ0.</password>
+        <firstname>gianina</firstname>
+        <lastname>bucur</lastname>
+    </user>
+    <user id="4">
+        <email>utilizator@yahoo.com</email>
+        <password>$2y$10$n46xDMiLdfkiXdrPS4s4JOjFyL8./EJLW.FWYKeAObcej5VOxjinm</password>
+        <firstname>prenume</firstname>
+        <lastname>nume</lastname>
+    </user>
+    <user id="5">
+        <email>gestionare@yahoo.com</email>
+        <password>$2y$10$l/Wze7pRWhpbqZHe/p8lae2wwe4LSrY6wLHe/vNip8b4VWzfbJvWm</password>
+        <firstname>prenume</firstname>
+        <lastname>nume</lastname>
+    </user>
+</users>
