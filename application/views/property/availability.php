@@ -7,8 +7,14 @@
 	</head>
 	<body>
 		<section>					
-			<form name="availableRooms" id="availableRooms" class="form" method="post" accept-charset="utf-8" 
+			<form name="availableRoomsForm" id="availableRoomsForm" class="form" method="post" accept-charset="utf-8" 
 				action=<?php echo $base_url . 'property/checkAvailability'; ?>>
+				<!-- div care momentan este ascuns si devine vizibil cand apare o eroare la logare -->
+				<div id="error" class="hiddenSubmitError">
+					<div id="xIcon"></div>
+					<div id="errorMessage">A aparut o eroare<span class="normal">Eroare</span></div>
+				</div>
+				<legend><?php echo $heading; ?></legend>
 				<div>					
 					<label for="checkInDate">Data sosire:</label>
 					<input name="checkInDate" id="checkInDate" readonly="true" placeholder="Data sosire"/>	
@@ -33,8 +39,8 @@
 					}
 				?>
 				<div>
-					<input id="submit" value="Verifica" type="submit" />
-				</div>				
+					<input name="checkAvailability" id="checkAvailability" type="button" value="Verifica"/>
+				</div>						
 			</form>
 					
 			<script type="text/javascript" src=<?php echo $datepickr; ?>></script>
