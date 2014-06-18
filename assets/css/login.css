@@ -7,8 +7,7 @@
 #loginForm div{
 	width: 100%;		
 }
-#loginForm label{	
-	
+#loginForm label{		
 	width: 150px;
 	margin-top: 5px;
 	padding: 3px;
@@ -33,7 +32,7 @@
 #loginForm input[type=submit], #loginForm input[type=button]{
 	float:right;
 	margin-top: 40px;			
-	background-color: #66CCFF;
+	background-color: #66AAFF;
     background: -webkit-linear-gradient(top, #66CCFF, #66BBFF);
     background: -moz-linear-gradient(top, #66CCFF, #66BBFF);
     background: -ms-linear-gradient(top, #66CCFF, #66BBFF);
