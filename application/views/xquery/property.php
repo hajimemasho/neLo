@@ -1,8 +1,8 @@
 declare function local:list-options() 
     as element()*{
         <div>
-            <label for="options">Optiuni camera:</label>
-            <input name="options" id="options" list="listOptions" 
+            <label for="roomOptions">Optiuni camera:</label>
+            <input name="roomOptions" id="roomOptions" list="listOptions" 
             placeholder="{doc("optionsDb.xml")//optiune[@id=1]/text()}"/>
             <datalist id="listOptions">
             {
