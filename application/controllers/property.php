@@ -22,6 +22,7 @@
     			'heading'	=>  'Camere disponibile',
     			'css_file'	=>   css_url() . 'availability.css',
     			'datepickrCss' => css_url() . 'datepickr.css',
+    			'generaljs_file'	=>	js_url() . 'general.js',
     			'js_file'   =>   js_url() . 'availability.js',
     			'datepickr'	=>	 js_url() . 'datepickr.js', 
     			'base_url'	=>   base_url(), 

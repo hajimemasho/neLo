@@ -2,6 +2,7 @@
 	<head>
 		<title><?php echo $title; ?></title>				
 		<link rel="stylesheet" type="text/css" href=<?php echo $css_file; ?> />
+		<script type="text/javascript" src=<?php echo $generaljs_file; ?>></script>
 		<script type="text/javascript" src=<?php echo $js_file; ?>></script>
 		<script type="text/javascript" src=<?php echo $datepickr; ?>></script>		
 	</head>

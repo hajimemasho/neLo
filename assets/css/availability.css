@@ -2,9 +2,9 @@
 @import url(datepickr.css);
 
 form{
-	border: 1px solid;
-	border-top:1px solid #777;
-	border-bottom:1px solid #777;
+	border: 1px solid #9F000F;
+	/*border-top:1px solid #777;
+	border-bottom:1px solid #777;*/
 	background-color: #FFEEAA;
 	float: left;	
 	padding: 25px 20px 25px 20px;
@@ -89,7 +89,7 @@ section label{
 }
 
 #availableRoomsForm #error{
-	border: 1px solid #ED2428;
+	border: 1px solid #9F000F;
 	background-color: #FFFFDD;
 	margin-bottom: 15px;	
 	padding: 10px 0px 10px 0px;		

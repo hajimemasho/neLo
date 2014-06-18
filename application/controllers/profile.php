@@ -23,6 +23,7 @@
 				'title'		=> 'Creare cont',
 				'heading'	=> 'Creare cont', 
 				'css_file'	=> css_url() . 'register.css',
+				'generaljs_file'	=> js_url() . 'general.js',
 				'js_file'   => js_url() . 'register.js',
 				'base_url'	=> base_url(), 
 				'userExistError' => 'hiddenSubmitError'
@@ -99,6 +100,7 @@
 				'title'		=> 'Autentificare',
 				'heading'	=> 'Autentificare', 
 				'css_file'	=> css_url() . 'login.css',
+				'generaljs_file'	=> js_url() . 'general.js',
 				'js_file'   => js_url() . 'login.js',
 				'base_url'	=> base_url()				
 			);			

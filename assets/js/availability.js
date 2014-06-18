@@ -1,9 +1,14 @@
+/**
+	-- script care verifica daca campurile sunt empty si daca 
+	data de sosire si de plecare sunt valide(data de sosire < 
+	date de plecare ) : 
+	- daca da, modifica tipul inputului din button in submit
+	- altfel, insereaza o eroare in documentul html via DOM --
+**/
 window.onload = function () {   	
 	/* extragerea credentialelor userului */
 	var checkInDate = document.availableRoomsForm.checkInDate;
-	var checkOutDate = document.availableRoomsForm.checkOutDate;
-	var roomType = document.availableRoomsForm.roomType;
-	var roomOptions = document.availableRoomsForm.roomOptions;
+	var checkOutDate = document.availableRoomsForm.checkOutDate;	
 	/* mesajele de eroare posibile */
 	var errors = [
 		"Nu ati introdus data de sosire. Va rugam corectati.",
@@ -26,7 +31,7 @@ var submitFunction = function (checkInDate, checkOutDate, errors) {
 			var inputNode = document.getElementById("checkAvailability");
 			inputNode.type = 'submit';
 		} else {
-			makeErrorVisible(errors[2]);
+			makeSubmitErrorVisible(errors[2]);
 		}
 	}
 }
