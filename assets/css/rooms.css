@@ -1,0 +1,37 @@
+@import url(addProperty.css);
+ul, li{
+	margin:0;
+	padding:0;
+}
+#addPropertyForm #rooms div div{	
+	border: 1px solid;
+	float:left;	
+	width: 209px;	
+}
+#addPropertyForm #rooms div div:first-of-type{
+	margin-right: 10px;
+}
+#addPropertyForm #rooms div .remove{	
+	float:left;	
+	width: 50px;
+}
+#addPropertyForm #rooms div div{	
+	margin: 5px 0px 5px 0px;	
+}
+#addPropertyForm #rooms div > div:last-of-type{
+	clear:left;
+}
+#addPropertyForm #rooms input:not([type=submit]):not([type=button]){	
+	width: 100%;
+}
+#addPropertyForm #rooms .add input{	
+	width: 60%;
+}
+#addPropertyForm #rooms .add{
+	margin-top: 0;	
+}
+#addPropertyForm #rooms .remove input{	
+	margin-left: 10px;
+	padding: 5px 1px 5px 1px;
+	width: 25px;
+}

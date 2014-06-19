@@ -1,0 +1,28 @@
+@import url(addProperty.css);
+ul, li{
+	margin:0;
+	padding:0;
+}
+#addPropertyForm #facilities input{
+	float:left;
+}
+#addPropertyForm #facilities div div{		
+	margin: 5px 0px 5px 0px;	
+}
+#addPropertyForm #facilities #addButton, #addPropertyForm #facilities input:not([type=button]){
+	clear:left;
+}
+/*
+#addPropertyForm #facilities input:not([type=submit]):not([type=button]){
+	width: 45%;
+}
+*/
+
+#addPropertyForm #facilities .add input{			
+	width: 20%;
+}
+#addPropertyForm #facilities .remove input{
+	margin-left: 10px;
+	padding: 5px 1px 5px 1px;
+	width: 25px;
+}

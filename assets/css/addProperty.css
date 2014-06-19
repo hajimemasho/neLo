@@ -1,0 +1,200 @@
+@import url(general.css);
+section, #footer, #wizardButtons, #addPropertyForm, #tabs{
+	float: left;
+}
+section, #footer{
+	width: 70%;
+	margin: 0 auto;		
+}
+#addPropertyForm input[type=submit], #addPropertyForm input[type=button]{
+	font-weight: bold;    
+	text-align: center;
+	color: white;
+}
+#footer{
+	clear: left;
+}
+#footer, #traverse{		
+	text-align: center;
+}
+#traverse{
+	padding: 20px 10px 0px 0px;	
+	float:right;
+	width: 200px;		
+}
+#wizardButtons{
+	width: 18%;	
+}
+#tabs{		
+	width: 79%;
+	margin-left: 20px;
+	border: 1px solid #CCCCCC;
+}
+#tabs{
+	-webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -ms-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;  
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* stilizare butoane din wizard*/
+#wizardButtons input:first-of-type{
+	-webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -ms-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;  
+    border-radius: 5px 5px 0px 0px;
+}
+#wizardButtons input:last-of-type{
+	-webkit-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius:  0px 0px 5px 5px;
+    -ms-border-radius: 0px 0px 5px 5px;
+    -o-border-radius: 0px 0px 5px 5px;  
+    border-radius:  0px 0px 5px 5px;
+}
+#wizardButtons input{
+	cursor: default;	
+	width: 100%;
+	padding: 10px 0px 10px 0px;    	
+    text-indent: 15px;
+	text-align: left;
+	font-size: 12px;		
+    font-weight: bold;	    	   
+}
+#wizardButtons input[id=button0]{	       
+    color: #FFFFFF;       
+    background-color: #15468D;
+    border: 1px solid #15468D;
+    padding: 5px 0px 5px 0px;  
+    box-shadow: 0px 0px 1px #7199C0 , 0px 0px 85px #7199C0 inset;       
+    text-shadow: 0 -1px 0 #7199C0;
+}
+.defaultWizardButton{					
+	color: #000000;  
+	background-color: #EEEEEE;
+	border: 1px solid #FDFDFE;	
+	box-shadow: 0px 0px 1px #000000, 0px 0px 85px #FFFFFF inset;    
+    text-shadow: 0 -1px 0 #EEEEEE;
+}
+.walkingWizardButton{	
+	color: #FFFFFF;       
+	background-color: #70AAD7;	
+	border-top: 1px solid #357DB5;
+	border-right: 1px solid #376B9E;
+	border-left: 1px solid #376B9E;
+	border-bottom: 1px solid #357DB5;
+	box-shadow: 0px 0px 1px #70AAD7 , 0px 0px 85px #66AACC inset;        
+    text-shadow: 0 -1px 0 #70AAD7;
+}
+
+/* stilizare buton submit, previuos si next */
+#addPropertyForm input[type=submit], #addPropertyForm input[type=button]{
+	float: left;
+	margin-left: 10px;	
+	width: 45%;		
+}
+#addPropertyForm input[type=submit], #addPropertyForm input[type=button]{			
+	background-color: #15468D;
+    background: -webkit-linear-gradient(top, #6293B9, #235495);
+    background: -moz-linear-gradient(top, #6293B9, #235495);
+    background: -ms-linear-gradient(top, #6293B9, #235495);
+    background: -o-linear-gradient(top, #6293B9, #235495);
+    background: linear-gradient(top, #6293B9, #235495);
+    border: 1px solid #15468D;
+    border-bottom: 1px solid #15468D;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;    
+    box-shadow: 0 1px 0 0 #99BBFF inset;       
+    padding: 5px 20px;    
+    text-shadow: 0 -1px 0 #235495;
+}
+
+#addPropertyForm input[type=submit]:active, #addPropertyForm input[type=button]:active{
+	border: 1px solid #15468D;
+	box-shadow: 0 0 20px 5px #15468D inset; 
+	-webkit-boxshadow:0 0 10px 5px #15468D inset;
+    -moz-box-shadow: 0 0 10px 5px #15468D inset;
+    -ms-box-shadow: 0 0 10px 5px #15468D inset;
+    -o-box-shadow: 0 0 10px 5px #15468D inset;
+}
+
+/* stilizare butoane addButton si removeButton */
+#addPropertyForm .remove input{
+	margin-left: 10px;
+	padding: 5px 1px 5px 1px;
+	width: 25px;
+}
+#addPropertyForm .remove input[type=button], #addPropertyForm .add input[type=button]:not([name=browseButton]){			
+	margin-left: 0;	
+	padding: 6px 20px;    
+	background-color: #D6730F;
+	border: 1px solid #D6730F;
+    border-bottom: 1px solid #D6730F;	
+    background: -webkit-linear-gradient(top, #F6AF3A, #CC6600);
+    background: -moz-linear-gradient(top, #F6AF3A, #CC6600);
+    background: -ms-linear-gradient(top, #F6AF3A, #CC6600);
+    background: -o-linear-gradient(top, #F6AF3A, #CC6600);
+    background: linear-gradient(top, #F6AF3A, #CC6600);    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;            
+    box-shadow: 0 1px 0 0 white inset;           
+    text-shadow: 0 -1px 0 #CC6600;
+}
+#addPropertyForm .remove input[type=submit]:active, #addPropertyForm .remove input[type=button]:active, 
+#addPropertyForm .add input[type=submit]:active, #addPropertyForm .add input[type=button]:active{
+	border: 1px solid #CC6600;
+	box-shadow: 0 0 10px 5px #CC6600 inset; 
+	-webkit-boxshadow:0 0 10px 5px #CC6600 inset ;
+    -moz-box-shadow: 0 0 10px 5px #CC6600 inset;
+    -ms-box-shadow: 0 0 10px 5px #CC6600 inset;
+    -o-box-shadow: 0 0 10px 5px #CC6600 inset;
+}
+
+/* stilizare formular */
+#addPropertyForm{
+	width: 100%;				
+	padding: 0px 0px 10px 0px;	
+}
+#addPropertyForm div{
+	margin: 5px 0px 5px 20px;
+}
+#addPropertyForm div input, #addPropertyForm div textarea{
+	margin: 0px 0px 8px 0px;
+}
+#addPropertyForm fieldset legend{	
+	margin: 20px 0px 0px 20px;
+}
+
+/* stilizare label */
+#addPropertyForm label{
+	color: #666666;
+	width: 150px;
+	margin-top: 3px;	
+}
+
+/* stilizare inputuri si textarea */
+#addPropertyForm input:not([type=submit]):not([type=button]), #addPropertyForm textarea{
+	height: 27px;
+	width: 70%;
+	padding: 4px 7px;	
+}
+#addPropertyForm input:not([type=submit]):not([type=button]), #addPropertyForm textarea{
+	border: 1px solid #aaa;
+	box-shadow: 0px 0px 3px #ccc, 0px 10px 25px #eee inset;
+	border-radius: 4px;	
+}
+#addPropertyForm input:not([type=submit]):not([type=button]):focus, #addPropertyForm textarea:focus{
+	background: #fff;	
+	border: 1px solid #555;
+	box-shadow: 0 0 3px #aaa;	
+}
+#addPropertyForm textarea{
+	height: 8%;
+}

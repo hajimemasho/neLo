@@ -1,0 +1,5 @@
+@import url(addProperty.css);
+
+#addPropertyForm textarea{
+	height: 20%;
+}
