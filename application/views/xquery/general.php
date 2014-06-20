@@ -59,3 +59,14 @@ declare function local:last-user-id()
         else
             xs:decimal(0)
 };
+
+declare function local:last-facility-id($property-id)
+    as xs:decimal*{
+        let $file := "propertiesDb.xml"
+        let $facility-node := (doc($file)//proprietate[@id=$property-id])/facilitati/facilitate
+        return 
+            if(exists($facility-node)) then
+                ($facility-node[last()])/data(@id)
+            else
+                xs:decimal(0)
+};
