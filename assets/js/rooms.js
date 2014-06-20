@@ -4,10 +4,6 @@ roomsObj.value = 0;
 window.onload = function () {
 	document.getElementById('previous').onclick = function(){previousTab('addPropertyForm', 'button5', 'button4', 'images')};
 	document.getElementById('addButton').onclick = function () {addRoom("rooms", "roomType", "roomPrice", roomsObj)};
-	document.getElementById('next').onclick = function (){
-		document.getElementById("button5").className = "defaultWizardButton";
-		document.getElementById("button6").className = "walkingWizardButton";
-	}
 }
 
 /*
@@ -32,21 +28,15 @@ window.onload = function () {
 var addRoom = function (id, resource1, resource2, resourceObj) {    	
 	var resourceNr = resourceObj.value;
 	var removeButtonId = "removeButton" + resourceNr;
-	var input1 = document.createElement("input");	
-    input1.setAttribute("name", resource1 + "[]");       
-    input1.setAttribute("id", resource1 + resourceNr);
-    input1.setAttribute("type", "text");
-    input1.setAttribute("list", resource1 + "s");
-    input1.setAttribute("value", "Single");
-
-    var datalist = document.createElement("datalist");    
-    input1.setAttribute("id", resource1 + "s");
+    var select = document.createElement("select");          
+    select.setAttribute("name", resource1 + "[]");
+    select.setAttribute("id", resource1 + resourceNr);
     var options = '';    
-    options += '<option value="Single"/>';
-    options += '<option value="Double"/>';
-    options += '<option value="Triple"/>';
-    options += '<option value="Apartment"/>';        
-    datalist.innerHTML = options;
+    options += '<option value="Single">Single</option>';
+    options += '<option value="Double">Double</option>';
+    options += '<option value="Triple">Triple</option>';
+    options += '<option value="Apartment">Apartment</option>';        
+    select.innerHTML = options;
     
     var input2 = document.createElement("input");
     input2.setAttribute("name", resource2 + "[]");       
@@ -62,30 +52,33 @@ var addRoom = function (id, resource1, resource2, resourceObj) {
     removeButton.setAttribute("type", "button");    
     removeButton.setAttribute("value", "x");
 	    
-
-    var div1 = document.createElement("div");
-    div1.appendChild(input1);
-    div1.appendChild(datalist);
+    //cream divul principal
+    var div0 = document.createElement("div");
+    //cream 3 divuri
+    var div1 = document.createElement("div");    
+    div1.appendChild(select);
     var div2 = document.createElement("div");
     div2.appendChild(input2);
     var div3 = document.createElement("div");    
     div3.setAttribute("class", "remove");
     div3.appendChild(removeButton);
+        
+    div0.appendChild(div1);
+    div0.appendChild(div2);
+	div0.appendChild(div3);
 
-   
-    var liElement = document.createElement("li");               
-    liElement.appendChild(div1);
-    liElement.appendChild(div2);
-	liElement.appendChild(div3);
+    var li = document.createElement("li");               
+    li.appendChild(div0);
 
     var ulParent = document.getElementById(id).getElementsByTagName('ul')[0];
-    ulParent.appendChild(liElement);
+    ulParent.appendChild(li);
     
     document.getElementById(removeButtonId).onclick = function(){removeRoom(id, removeButtonId)};
     increment(resourceObj);
 };
 
-/* functie care sterge un element de tip li in care se afla butonul cu id-ul removeRoomButtonId */
+// functie care sterge un element de tip li in care se afla 
+// butonul cu id-ul removeRoomButtonId
 var removeRoom = function(id, removeRoomButtonId)
 {
     removeInputs(id, removeRoomButtonId);

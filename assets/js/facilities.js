@@ -6,11 +6,6 @@ facilitiesObj.value = 0;
 window.onload = function () {
 	document.getElementById('previous').onclick = function(){previousTab('addPropertyForm', 'button3', 'button2', 'characteristics')};
 	document.getElementById('addButton').onclick = function () { addFacility("facilities", "facility", facilitiesObj, "Facilitate")};
-
-	document.getElementById('next').onclick = function (){
-		document.getElementById("button3").className = "defaultWizardButton";
-		document.getElementById("button4").className = "walkingWizardButton";
-	}
 }
 // functie care adauga un nou input pentru introducerea unei facilitati
 var addFacility = function (id, resource, resourceObj, placeholder) {     

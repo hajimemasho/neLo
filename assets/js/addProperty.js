@@ -1,7 +1,4 @@
-/* variabila care retine numarul de input-uri de tip button in fieldset-ul cu id-ul options */
-var optionsNr = 0;
-/* nr de optiuni pentru fiecare tip de camera in parte */
-var optionsNumber = [];
+
 
 // functie care incrementeaza valoarea unui obiect dat ca parametru
 // si-l returneaza 
@@ -9,34 +6,7 @@ var increment = function (obj) {
     obj.value++;    
     return obj.value;
 }
-// functie care adauga un nou input pentru introducerea unei facilitati
-var addFacility = function (id, resource, resourceObj, placeholder) {     
-    // se preia valoarea obiectului
-    var resourceNr = resourceObj.value;
-    // se creaza noul id pentru butonul de remove
-    var removeButtonId = "removeButton" + resourceNr;
-    // se creaza butonul de remove
-    var removeButton = document.createElement("input");
-    // se creaza un input
-    var input = document.createElement('input');    
-    // butonul de remove va avea un id unic(ex, "removeButton0") si 
-    // va afisa "x"
-    removeButton.setAttribute("name", "removeButton");
-    removeButton.setAttribute("id", removeButtonId);
-    removeButton.setAttribute("type", "button");
-    removeButton.setAttribute("value", "x");    
-    // inputul va avea un id unic(ex, "facilitate0") iar in placeholder
-    // va afisa numarul de facilitati care s-au creat
-    input.setAttribute("name", resource + "[]");
-    input.setAttribute("id", resource + resourceNr);
-    input.setAttribute("type", "text");        
-    input.setAttribute("placeholder", placeholder + resourceNr);
-    // elementele se dau ca parametri unei functii care le va introduce 
-    // intr-un element de tip li si le va insera in documentul html 
-    // via DOM
-    addInputs(id, resource, removeButtonId, removeButton, input);        
-    increment(resourceObj);
-}
+
 // functie care sterge un element de tip input din fieldset-ul cu id-ul 
 // dat ca parametru
 var  removeResource = function(id, removeButtonId)
@@ -56,7 +26,9 @@ var  removeResource = function(id, removeButtonId)
 //        </li>             
 var addInputs = function (id, resource, removeButtonId, removeButton, input) {        
     // cream un element de tip li
-    var li = document.createElement("li");       
+    var li = document.createElement("li");   
+    // cream div-ul principal    
+    var div0 = document.createElement("div");
     // cream doua divuri care vor contine inputul, respectiv butonul
     var div1 = document.createElement("div");
     var div2 = document.createElement("div");    
@@ -65,9 +37,11 @@ var addInputs = function (id, resource, removeButtonId, removeButton, input) {
     // adaugam inputul si butonul in divuri
     div1.appendChild(input);
     div2.appendChild(removeButton);
-    // inseram divurile in elementul li
-    li.appendChild(div1);
-    li.appendChild(div2);
+    // inseram divurile in divul principal
+    div0.appendChild(div1);
+    div0.appendChild(div2);
+    // inseram divul principal in elementul li
+    li.appendChild(div0);    
     // preluam parintele tuturor elementelor de tip li, adica lu
     var ulParent = document.getElementById(id).getElementsByTagName('ul')[0];    
     // inseram elementul li in ul
@@ -83,7 +57,7 @@ var addInputs = function (id, resource, removeButtonId, removeButton, input) {
 var removeInputs = function (id, removeButtonId) {        
     // accesam li-ul in care se afla butonul pe care tocmai am dat click
     // adica cel cu id-ul removeButtonId
-    var li = document.getElementById(removeButtonId).parentNode.parentNode;        
+    var li = document.getElementById(removeButtonId).parentNode.parentNode.parentNode;        
     // preluam parintele elementulului li    
     var ulParent = document.getElementById(id).getElementsByTagName('ul')[0];
     // verificam daca numarul de copii este mai mare decat 1
@@ -108,7 +82,7 @@ var previousTab = function(id, currentWizardButtonId, wizardButtonId, pageName){
         // altfel, atasam un eveniment pentru butonul previous de pe pagina nou incarcata
         document.getElementById('previous').onclick = function(){previousTab('addPropertyForm')};   
     }
-}
+};
 
 
 
@@ -116,12 +90,19 @@ var previousTab = function(id, currentWizardButtonId, wizardButtonId, pageName){
 
 
 
+/* Functii care creaza diferite elemente de tip html */
 
+/* functie care creaza un label, numele label-ului este dat de textNode */
+var createLabel = function(forValue, textNode){    
+    var label;
 
+    label = document.createElement("label");    
+        
+    label.setAttribute("for", forValue);            
 
-
-
-
+    label.appendChild(document.createTextNode(textNode));
+    return label;
+};
 
 
 
@@ -192,7 +173,7 @@ var getRoomLastId = function(id){
     return lastId;
 }
 
-/* functie care adauga un element de tip input in fieldset-ul cu id-ul options */
+/* 
 var addOption = function(listItem, id) 
 {
     var xButtonId, xButton, inputElement;
@@ -200,20 +181,20 @@ var addOption = function(listItem, id)
     if(optionsNumber[listItem] == undefined){
         optionsNumber[listItem] = 0;
     }
-    /* cream un element de tip input si un buton care va putea sterge inputul din dreptul sau */
+    // cream un element de tip input si un buton care va putea sterge inputul din dreptul sau
     xButtonId = "xButton" + listItem + optionsNumber[listItem];
     xButton = createButton("xButton", xButtonId, "x");//, "removeOption('" + id +"')");        
     inputElement = createInput("roomOption_" + listItem + "[]", "roomOption", "Optiune"+optionsNumber[listItem]);
 
-    /* se adauga elementele la arborele dom */    
+    // se adauga elementele la arborele dom 
     addInputs1(listItem, id, xButtonId, xButton, inputElement);
 
-    /* se incrementeaza numarul de optiuni pentru tipul de camera dat de listItem */
+    // se incrementeaza numarul de optiuni pentru tipul de camera dat de listItem 
     optionsNumber[listItem]++;
     optionsNr++;        
 }
-
-
+*/
+/*
 var addInputs1 = function(listItem, id, xButtonId, xButton, inputElement){
     var ulParent, liElement, divArray;
     //alert("listItem = " + listItem);
@@ -234,7 +215,7 @@ var addInputs1 = function(listItem, id, xButtonId, xButton, inputElement){
                 <input type="button" id="xButton1"/>
             </div>        
         </li>    
-    */    
+       
     divArray[0].appendChild(inputElement);
     divArray[0].appendChild(xButton);
     liElement.appendChild(divArray[0]);
@@ -249,30 +230,12 @@ var addInputs1 = function(listItem, id, xButtonId, xButton, inputElement){
     ulParent.appendChild(liElement);
     //alert(ulParent.getElementsByTagName('li')[0].getElementById('removeRoomButton0'));
 
-    /* se ataseaza cate un eveniment fiecarui buton xButtonId */
+    // se ataseaza cate un eveniment fiecarui buton xButtonId
     document.getElementById(xButtonId).onclick = function(){removeOption(listItem + 1, id, xButtonId)};    
 }
-
+*/
 /* functie care sterge un element de tip input in fieldset-ul cu id-ul options */
-var removeOption = function(listItem, id, xButtonId) 
-{        
-    
-    removeInputs1(listItem, id, xButtonId);    
-};
 
-/* Functii care creaza diferite elemente de tip html */
-
-/* functie care creaza un label, numele label-ului este dat de textNode */
-var createLabel = function(forValue, textNode){    
-    var label;
-
-    label = document.createElement("label");    
-        
-    label.setAttribute("for", forValue);            
-
-    label.appendChild(document.createTextNode(textNode));
-    return label;
-};
 
 /* functie care creaza un input de tip number */
 var createNrInput = function(name, id, min, max, step)
@@ -352,20 +315,3 @@ var createArrayElements = function(name, number){
     
     return elements;
 };
-var removeInputs1 = function(listItem, id, xButtonId)
-{
-    var ulParent, liElement;
-    
-    // accesam li-ul in care se afla butonul pe care tocmai am dat click
-    liElement = document.getElementById(xButtonId).parentNode.parentNode;    
-    alert("liElement in removeInputs1 = " + liElement);
-    // preluam parintele elementulului li    
-    ulParent = liElement.parentNode;//document.getElementById(id).getElementsByTagName('ul')[listItem + 1];
-
-//===> sa mai pun testul asta? are ceva daca se incearca stergerea unui element care nu exista?
-    if(ulParent.children.length >= 1)
-    {            
-        ulParent.removeChild(liElement);                                  
-    }
-};
-
