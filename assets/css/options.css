@@ -3,46 +3,98 @@ ul, li{
 	margin:0;
 	padding:0;
 }
-#addPropertyForm #options div{
-
+li{
 	float:left;	
-	width: 209px;
+}
+#addPropertyForm #options div, #addPropertyForm #options input, #addPropertyForm #options label{
+	float:left;	
 }
 #addPropertyForm #options li{
+	width: 100%;	
+}
+#addPropertyForm #options li > div{		
+	width: 66%;	 
+}
+#addPropertyForm #options li div > div:first-of-type, #addPropertyForm #options li div > div:first-of-type + div{	
+	width: 50%;
+}
+#addPropertyForm #options li .remove{		
+	width: 100%;	
+}
+#addPropertyForm #options div div{		
+	margin: 0px;	
+}
+
+#addPropertyForm #options li > div:first-of-type, #addPropertyForm #options > div:last-of-type, 
+#addPropertyForm #options #addButton, #addPropertyForm #options input:not([type=button]){
+	clear:left;
+}
+#addPropertyForm #options input:not([type=submit]):not([type=button]){
+	width: 91%;
+}
+#addPropertyForm #options .remove input[type=button]{		
+	margin-left: 10px;
+	padding: 5px 1px 5px 1px;
+	width: 25px;
+}
+#addPropertyForm #options .roomFeature{
+	padding-bottom: 5px;
+}
+#addPropertyForm #options{
+	height: 53.4%;	
+}
+
+
+/*
+#tabs #addPropertyForm #options ul li ul li div{
+	width: 67.3%;
+}
+#addPropertyForm #options div{
+	width: 31.9%;
+}
+#tabs #addPropertyForm #options ul li ul li div > input[type=text]{
+	margin-left: 0px;
+	width: 91.6%;	
+}
+#tabs #addPropertyForm #options ul li ul li div > input[type=button]{
+	width: 6%;
+}
+#addPropertyForm #options li > div, #addPropertyForm #options li div > input{
+	float:left;	
+	
+}
+#addPropertyForm #options ul li ul li div > input {
+	float:left;	
+}
+#addPropertyForm #options ul li .add{
+	clear:left;	
+}
+
+#addPropertyForm #options li, #addPropertyForm #options .add{
 	clear:left;
 }
 
 #addPropertyForm #options .add input{
 	width: 60%;
 }
-
-.roomFeature{
-	
-}
-
-
 #addPropertyForm #options div div:first-of-type{
 	margin-right: 10px;
 }
-#addPropertyForm #options div .remove{	
-	float:left;	
-	width: 50px;
-}
 #addPropertyForm #options div div{	
 	margin: 5px 0px 5px 0px;	
-}
-#addPropertyForm #options div > div:last-of-type{
-	clear:left;
 }
 #addPropertyForm #options input:not([type=submit]):not([type=button]){	
 	width: 100%;
 }
 
-#addPropertyForm #options .remove{
-	padding-top: 22px;
-}
 #addPropertyForm #options .remove input{	
+	float:left;	
 	margin-left: 10px;
 	padding: 5px 1px 5px 1px;
 	width: 25px;
 }
+
+#addPropertyForm #options{
+	height: 53.4%;	
+}
+*/

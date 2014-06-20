@@ -5,19 +5,26 @@ body{
 label{
 	font-family:Georgia, Times, "Times New Roman", serif;	
 }
-form{
-	width:50%;	
-	font-size: 15px;
-	margin-left: 20px;		
+section{
+	margin-left: 20px;
 }
-div, input, label, p, span{
+form{
+	margin: 0;
+	width:50%;	
+	font-size: 15px;	
+}
+fieldset{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+div, input, label, p, span, textarea{	
 	padding:0;
-	margin:0;
+	margin:0;	
 }
 div, input, label{
 	display: block;	
 }
-
 input, select, textarea, label{
 	font-size: 11px;	
 	
@@ -27,6 +34,9 @@ label, legend{
 	margin: 5px 0px 5px 0px;
 }
 
+legend{
+	font-size: 12px;
+}
 h4{
 	margin:0px;
 	font-weight:normal;	
@@ -40,7 +50,9 @@ ul{
 ul li{
 	display: block;
 }
-
+textarea{
+	width: 100%;	
+}
 .hiddenVisibility{
 	visibility: hidden;	
 }
@@ -64,5 +76,8 @@ input{
 	clear:both;
 }
 .normal{
-	font-weight: normal
+	font-weight: normal;
+}
+#footer{
+	/*border: 1px solid;*/
 }

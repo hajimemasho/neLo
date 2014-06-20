@@ -2,3 +2,6 @@
 #hiddenButton{
 	visibility: hidden;
 }
+#tabs #addPropertyForm #traverse{
+	margin-top: 7px;
+}

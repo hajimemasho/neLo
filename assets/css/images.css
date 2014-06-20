@@ -3,32 +3,47 @@ ul, li{
 	margin:0;
 	padding:0;
 }
-#addPropertyForm #images input{
-	float:left;
+li{
+	float:left;	
 }
-#addPropertyForm #images div div{	
-	margin: 5px 0px 5px 0px;	
+#addPropertyForm #images li{
+	width: 100%;	
 }
+#addPropertyForm #images li > div{		
+	width: 66%;	 
+}
+#addPropertyForm #images li div > div:first-of-type{
+	width: 72%;
+}
+#addPropertyForm #images div, #addPropertyForm #images input{
+	float:left;	
+}
+#addPropertyForm #images div div{		
+	margin: 0px;	
+}
+#addPropertyForm #facilities li > div:first-of-type, #addPropertyForm #images > div:last-of-type, 
 #addPropertyForm #images #addButton, #addPropertyForm #images input:not([type=button]){
 	clear:left;
 }
 #addPropertyForm #images input:not([type=submit]):not([type=button]){
-	width: 45%;
+	width: 100%;
 }
-
-/* stilizare buton browseButton */
-#addPropertyForm #images input[type=button]{	
-	width: 20%;
+#addPropertyForm #images .add input{			
+	width: 100%;
 }
-#addPropertyForm #images .remove input{
+#addPropertyForm #images .remove{
 	margin-left: 10px;
+}
+#addPropertyForm #images .remove input{	
 	padding: 5px 1px 5px 1px;
 	width: 25px;
 }
-#addPropertyForm #images .browse input {
-	margin-left:2px;
-	width:12%;
+#addPropertyForm #images{
+	height: 53.4%;	
+}
+#addPropertyForm #images .browse input {	
 	color: #666666;
+	margin-left: 5px;	
 	font-weight: normal;
 	background-color: #FFFFFF;
 	border: 1px solid #CCCCCC;
