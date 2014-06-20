@@ -4,27 +4,7 @@ imagesObj.value = 0;
 window.onload = function () {
 	document.getElementById('previous').onclick = function(){previousTab('addPropertyForm', 'button4', 'button3', 'facilities')};
 	document.getElementById('addButton').onclick = function () { addImage("images", "image", imagesObj)};
-	document.getElementById('next').onclick = function (){
-		document.getElementById("button4").className = "defaultWizardButton";
-		document.getElementById("button5").className = "walkingWizardButton";
-	}
 }
-
-
-
-
-/*
-<div>	
-	<input name="image[]" id="image0" placeholder="Imagine"/>								            
-</div>	
-<div class="browse">
-	<input name="browseButton" id="browseButton0" type="button" value="Cauta"/>
-</div>								 	
-<div class="remove">
-	<input name="removeButton" id="removeButton0" type="button" value="x">
-</div>*/
-
-//
 var addImage = function (id, resource, resourceObj) {    	
 	var resourceNr = resourceObj.value;
 	var removeButtonId = "removeButton" + resourceNr;
@@ -48,7 +28,7 @@ var addImage = function (id, resource, resourceObj) {
     removeButton.setAttribute("type", "button");    
     removeButton.setAttribute("value", "x");
 	    
-
+    var div0 = document.createElement("div");
     var div1 = document.createElement("div");
     div1.appendChild(input);    
     var div2 = document.createElement("div");
@@ -58,15 +38,14 @@ var addImage = function (id, resource, resourceObj) {
     div3.setAttribute("class", "remove");
     div3.appendChild(removeButton);
 
-   
-    var liElement = document.createElement("li");               
-    liElement.appendChild(div1);
-    liElement.appendChild(div2);
-	liElement.appendChild(div3);
-
+    div0.appendChild(div1);
+    div0.appendChild(div2);
+    div0.appendChild(div3);
+    var liElement = document.createElement("li");                   
+    liElement.appendChild(div0);
     var ulParent = document.getElementById(id).getElementsByTagName('ul')[0];
     ulParent.appendChild(liElement);
     
-    document.getElementById(removeButtonId).onclick = function(){removeRoom(id, removeButtonId)};
+    document.getElementById(removeButtonId).onclick = function(){removeImage(id, removeButtonId)};
     increment(resourceObj);
 };
